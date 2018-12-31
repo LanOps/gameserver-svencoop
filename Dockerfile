@@ -13,20 +13,16 @@ ENV SRCDS_PURE 1
 ENV SRCDS_MAP hl_c00
 ENV APP_ID 276060
 
-# Install TF2
-RUN /home/steam/steamcmd/steamcmd.sh +login anonymous \
-        +force_install_dir /home/steam/sven \
-        +app_update $APP_ID validate \
-        +quit
-
+# Add Start Script
+RUN mkdir -p /home/steam/sven 
 RUN { \
-		echo '@ShutdownOnFailedCommand 1'; \
-		echo '@NoPromptForPassword 1'; \
-		echo 'login anonymous'; \
-		echo 'force_install_dir /home/steam/sven/'; \
-		echo 'app_update $APP_ID'; \
-		echo 'quit'; \
-} > /home/steam/sven/sven_update.txt
+        echo '@ShutdownOnFailedCommand 1'; \
+        echo '@NoPromptForPassword 1'; \
+        echo 'login anonymous'; \
+        echo 'force_install_dir /home/steam/sven/'; \
+        echo 'app_update $APP_ID'; \
+        echo 'quit'; \
+} > /home/steam/sven_update.txt
 
 # Add Start Script
 ADD startServer.sh /home/steam/startServer.sh
@@ -37,4 +33,3 @@ EXPOSE 27015/udp
 
 # Start Server
 CMD ["/home/steam/startServer.sh"]
-
