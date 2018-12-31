@@ -1,4 +1,4 @@
-FROM lanopsdev/steamcmd:latest
+FROM lanopsdev/gameserver-steamcmd:latest
 MAINTAINER Thornton Phillis (Th0rn0@lanops.co.uk)
 
 # Env Defaults
