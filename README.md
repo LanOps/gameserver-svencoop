@@ -1,4 +1,4 @@
-# Sven Co-op Docker Server
+# Sven Co-op Docker Image
 
 ## Usage
 
