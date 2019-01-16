@@ -11,6 +11,7 @@ docker run -it --name "SvenCoop" \
     -e SRCDS_LAN=0 \
     -e SRCDS_PW=default \
     -e SRCDS_RCONPW=default \
+    -e SRCDS_TOKEN=xxx \
     -p 27015:27015 \
     -p 27015:27015/udp \
     lanopsdev/gameserver-svencoop
@@ -26,6 +27,7 @@ docker run -it --name "SvenCoop" \
     -e SRCDS_MAP=hl_c00 \
     -e SRCDS_MAXPLAYERS=24 \
     -e SRCDS_PW=default \
+    -e SRCDS_TOKEN=xxx \
     -p 27015:27015 \
     -p 27015:27015/udp \
     lanopsdev/gameserver-svencoop
