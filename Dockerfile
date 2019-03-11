@@ -25,7 +25,7 @@ RUN { \
 } > /home/steam/sven_update.txt
 
 # Add Start Script
-ADD startServer.sh /home/steam/startServer.sh
+ADD resources/root/startServer.sh /home/steam/startServer.sh
 
 # Expose Ports
 EXPOSE 27015 27020 27005 51840
