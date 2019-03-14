@@ -28,8 +28,8 @@ RUN { \
 ADD resources/root/startServer.sh /home/steam/startServer.sh
 
 # Expose Ports
-EXPOSE 27015 27020 27005 51840
-EXPOSE 27015/udp
+EXPOSE ${SRCDS_PORT}
+EXPOSE ${SRCDS_PORT}/udp
 
 # Start Server
 CMD ["/home/steam/startServer.sh"]

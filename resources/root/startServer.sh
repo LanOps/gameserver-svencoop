@@ -12,6 +12,7 @@ cd /home/steam/sven
     -steamcmd_script /home/steam/sven/sven_update.txt \
     -port ${SRCDS_PORT} \
     -num_edicts 3072 \
+    -nohltv \
     +sv_pure ${SRCDS_PURE} \
     +maxplayers ${SRCDS_MAXPLAYERS} \
     +hostname "${SRCDS_HOSTNAME}" \
