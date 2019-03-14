@@ -5,11 +5,9 @@
 ```
 docker run -it --name "SvenCoop" \
     -e SRCDS_HOSTNAME=myServer \
-    -e SRCDS_PORT=27015 \
     -e SRCDS_MAP=hl_c00 \
     -e SRCDS_MAXPLAYERS=24 \
     -e SRCDS_LAN=0 \
-    -e SRCDS_PW=default \
     -e SRCDS_RCONPW=default \
     -e SRCDS_TOKEN=xxx \
     -p 27015:27015 \
@@ -23,10 +21,9 @@ docker run -it --name "SvenCoop" \
 docker run -it --name "SvenCoop" \
     -v localVolume:/home/steam/sven \
     -e SRCDS_HOSTNAME=myServer \
-    -e SRCDS_PORT=27015 \
     -e SRCDS_MAP=hl_c00 \
+    -e SRCDS_LAN=0 \
     -e SRCDS_MAXPLAYERS=24 \
-    -e SRCDS_PW=default \
     -e SRCDS_TOKEN=xxx \
     -p 27015:27015 \
     -p 27015:27015/udp \
