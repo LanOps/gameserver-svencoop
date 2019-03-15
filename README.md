@@ -42,3 +42,4 @@ docker run -it --name "SvenCoop" \
 * SRCDS_REGION - Server Region (Default -1)
 * SRCDS_LAN - Set Lan Server (Default 0)
 * SRCDS_MAP - Starting Map (Default hl_c00)
+* SRCDS_TOKEN - Server token from [http://steamcommunity.com/dev/managegameservers](http://steamcommunity.com/dev/managegameservers) - Required for Browser Broadcast

@@ -20,4 +20,5 @@ cd /home/steam/sven
     +rcon_password ${SRCDS_RCONPW} \
     sv_region ${SRCDS_REGION} \
     +sv_lan "${SRCDS_LAN}" \
+    +sv_setsteamaccount ${SRCDS_TOKEN} \
     +map ${SRCDS_MAP}
