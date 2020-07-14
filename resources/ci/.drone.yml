@@ -13,8 +13,8 @@ steps:
       from_secret: DISCORD_WEBHOOK_URL
     template: |
       {
-        "username": "SVEN-COOP Docker Build Drone",
-        "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - Docker Build Started.",
+        "username": "SVEN-COOP Docker CI",
+        "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - Build Started.",
         "avatar_url": "https://cdn.worldvectorlogo.com/logos/drone.svg"
       }
   when:
@@ -30,8 +30,8 @@ steps:
       from_secret: DISCORD_WEBHOOK_URL
     template: |
       {
-        "username": "SVEN-COOP Docker Build Drone",
-        "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - **TAGGED** Docker Build Started.",
+        "username": "SVEN-COOP Docker CI",
+        "content": "__**TAGGED**__ - \"${DRONE_COMMIT_MESSAGE}\" - Build Started.",
         "avatar_url": "https://cdn.worldvectorlogo.com/logos/drone.svg"
       }
   when:
@@ -83,7 +83,7 @@ steps:
       from_secret: DISCORD_WEBHOOK_URL
     template: |
       {
-        "username": "SVEN-COOP Docker Build Drone",
+        "username": "SVEN-COOP Docker CI",
         "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - Commit: {{ build.commit }} Failed. Fix me please!",
         "avatar_url": "https://cdn.worldvectorlogo.com/logos/drone.svg"
       }
@@ -98,7 +98,7 @@ steps:
       from_secret: DISCORD_WEBHOOK_URL
     template: |
       {
-        "username": "SVEN-COOP Docker Build Drone",
+        "username": "SVEN-COOP Docker CI",
         "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - Commit: {{ build.commit }} - Image has been built and pushed to Docker Hub.",
         "avatar_url": "https://cdn.worldvectorlogo.com/logos/drone.svg"
       }
@@ -115,8 +115,8 @@ steps:
       from_secret: DISCORD_WEBHOOK_URL
     template: |
       {
-        "username": "SVEN-COOP Docker Build Drone",
-        "content": "__***{{uppercase build.branch }}***__ - \"${DRONE_COMMIT_MESSAGE}\" - Commit: {{ build.commit }} - Image has been built and pushed to Docker Hub.",
+        "username": "SVEN-COOP Docker CI",
+        "content": "__***TAGGED**__ - \"${DRONE_COMMIT_MESSAGE}\" - Commit: {{ build.commit }} - Image has been built and pushed to Docker Hub.",
         "avatar_url": "https://cdn.worldvectorlogo.com/logos/drone.svg"
       }
   when:
@@ -130,6 +130,6 @@ trigger:
   - master
 ---
 kind: signature
-hmac: eed7e77dbc25a3a05cd56cedc4c23102be810e94d77ae7cdb3436484585a5852
+hmac: 4b113c01694c5939a86021d0e81f2f29d64d1dd85fb594a61092355e2482b62d
 
 ...
